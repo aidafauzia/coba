@@ -1457,9 +1457,6 @@ form label {
   border-color: #09C6AB;
 }
 
-.row-mt-15em {
-  margin-top: 15em;
-}
 @media screen and (max-width: 768px) {
   .row-mt-15em {
     margin-top: 7em;
