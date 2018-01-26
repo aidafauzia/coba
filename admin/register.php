@@ -1,22 +1,17 @@
-<?php 
-@session_start();
-require_once '../action/koneksi.php';
-if(@$_POST['login']){
-	$username = $_POST['username'];
-	$password = md5($_POST['password']);
-	$sql = mysqli_query($connect, "SELECT * FROM user where username = '$username' AND password = '$password'") or die ($db->error);
-	$data = mysqli_fetch_array($sql);
-	$id = $data[0];
-	$cek = mysqli_num_rows($sql);
-	if($cek>0){
-		$_SESSION['traveler'] = $id;
-		echo "<script>window.location = 'adminn/index.php'</script>";
-	} else {
-		echo "<script>alert('Login Gagal')</script>";
-	}
-}
+	<?php
+	session_start();
+	if($_SESSION['traveler']){
 
-?>
+		require_once '../action/koneksi.php';
+		if(isset($_POST['Input'])){
+			$namalengkap = $_POST['namalengkap'];
+			$username = $_POST['username'];
+			$password = $_POST['password'];
+			$sql = mysqli_query($connect, "INSERT INTO user where namalengkap = '$namalengkap', username = '$username', password = '$password'") or die ($db->error);
+		} else {
+			echo "<script>window.location='../login.php';</script>";
+		}
+		?>
 
 <!--
 Author: W3layouts
@@ -58,14 +53,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="login">
 				<h3 class="inner-tittle t-inner">Login</h3>
 				
-				<form role="form" method="POST">
-					<input type="text" class="text" name="username" placeholder="Username">
-					<input type="password" name="password" placeholder="Password">
-					<a href="register.php">Register</a>
-					<div class="submit"><input type="submit" value="Login" name="login"></div>
-					<div class="clearfix"></div>
-					
-					
+				<form class="form-horizontal" role="form" method="POST"> 
+					<div class="form-group"> 
+						<input type="text" class="form-control" id="namalengkap" placeholder="Nama Lengkap" name="namalengkap"> 
+					</div> 
+					<div class="form-group"> 
+						<input type="text" class="form-control" id="username" placeholder="Username" name="username"> 
+					</div> 
+					<div class="form-group">
+						<input type="password" class="form-control" id="password" placeholder="Password" name="password"> 
+					</div>
+					<div class="submit">
+						<input type="submit" value="Input" name="Input">
+					</div> 
 				</form>
 			</div>
 
