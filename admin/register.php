@@ -7,9 +7,9 @@
 			$namalengkap = $_POST['namalengkap'];
 			$username = $_POST['username'];
 			$password = $_POST['password'];
-			$sql = mysqli_query($connect, "INSERT INTO user where namalengkap = '$namalengkap', username = '$username', password = '$password'") or die ($db->error);
+			$sql = mysqli_query($connect, "INSERT INTO user (namalengkap, username, password) VALUES ('$namalengkap','$username','$password')") or die ($db->error);
 		} else {
-			echo "<script>window.location='../login.php';</script>";
+			echo "<script>window.location='../register.php';</script>";
 		}
 		?>
 

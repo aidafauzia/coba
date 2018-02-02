@@ -93,7 +93,9 @@
 									</div>
 									<div class="submit">
 										<input type="submit" value="Input" name="Input">
+										<a href="dafrute.php" class="btn btn-default">Back</a>
 									</div> 
+
 								</form> 
 							</div>
 

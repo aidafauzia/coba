@@ -8,19 +8,9 @@
 <div class="menu">
  <ul id="menu" >
   <li><a href="index.php"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
-  <li id="menu-academico" ><a href="#"><i class="fa fa-plane"></i> <span>Pesawat</span> <span style="float: right"></span></a>
-    <ul id="menu-academico-sub" >
-      <li id="menu-academico-avaliacoes" ><a href="inpesawat.php">Input Data Pesawat</a></li>
-      <li id="menu-academico-boletim" ><a href="dafpesawat.php">Data Pesawat</a></li>
-    </ul>
-  </li>
+  <li><a href="dafpesawat.php"><i class="fa fa-plane"></i> <span>Data Pesawat</span></a>  </li>
   <li><a href="dafcostumer.php"><i class="fa fa-user"></i> <span>Data Costumer</span></a></li>
-  <li id="menu-academico" ><a href="#"><i class="fa fa-plane"></i> <span>Rute Pesawat</span> <span style="float: right"></span></a>
-    <ul id="menu-academico-sub" >
-      <li id="menu-academico-avaliacoes" ><a href="inrute.php">Input Rute Pesawat</a></li>
-      <li id="menu-academico-boletim" ><a href="dafrute.php">Data Rute Pesawat</a></li>
-    </ul>
-  </li>
+  <li><a href="dafrute.php"><i class="fa fa-plane"></i> <span>Rute Pesawat</span></a></li>
   <li><a href="logout.php"><i class="fa fa-sign-out"></i> <span>Log Out</span></a></li>
 </ul>
 </div>

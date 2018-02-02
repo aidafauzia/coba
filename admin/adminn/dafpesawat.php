@@ -67,6 +67,7 @@
 									<div class="row">
 										<div id="tbl-length" class="col-sm-12 col-md-10">
 											<table class="table table-striped table-responsive table-hover">
+											<a class="fa fa-plus" href="inpesawat.php">Tambah Data</a>
 												<thead>
 													<th>No</th>
 													<th>Nama Pesawat</th>
