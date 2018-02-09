@@ -5,7 +5,7 @@ if($_SESSION['traveler']){
 	?>
 
 	<?php 
-	require_once '../../action/koneksi.php';
+	require_once '../action/koneksi.php';
 	if(isset($_GET['aksi']) == 'delete'){
 		$ambilid = $_GET['id'];
 		$cek = mysqli_query($connect, "SELECT * from rute where id='$ambilid'");
@@ -24,5 +24,5 @@ if($_SESSION['traveler']){
 	?>
 	<?php 
 } else {
-	echo "<script>window.location='../login.php';</script>";
+	echo "<script>window.location='../index.php';</script>";
 }

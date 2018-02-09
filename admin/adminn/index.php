@@ -2,1102 +2,1116 @@
 session_start();
 if($_SESSION['traveler']){
 
-	?>
+  ?>
 
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
-<html>
-<head>
-	<title>Traveler Admin</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Augment Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<!-- Bootstrap Core CSS -->
-	<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
-	<!-- Custom CSS -->
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
-	<!-- Graph CSS -->
-	<link href="css/font-awesome.css" rel="stylesheet"> 
-	<!-- jQuery -->
-	<link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'>
-	<!-- lined-icons -->
-	<link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
-	<!-- //lined-icons -->
-	<script src="js/jquery-1.10.2.min.js"></script>
-	<script src="js/amcharts.js"></script>	
-	<script src="js/serial.js"></script>	
-	<script src="js/light.js"></script>	
-	<script src="js/radar.js"></script>	
-	<link href="css/barChart.css" rel='stylesheet' type='text/css' />
-	<link href="css/fabochart.css" rel='stylesheet' type='text/css' />
-	<!--clock init-->
-	<script src="js/css3clock.js"></script>
-	<!--Easy Pie Chart-->
-	<!--skycons-icons-->
-	<script src="js/skycons.js"></script>
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 2 | Dashboard</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+  folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="../bower_components/morris.js/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="../bower_components/jvectormap/jquery-jvectormap.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="../bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
-	<script src="js/jquery.easydropdown.js"></script>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
-	<!--//skycons-icons-->
-</head> 
-<body>
-	<div class="page-container">
-		<!--/content-inner-->
-		<div class="left-content">
-			<div class="inner-content">
-				<!-- header-starts -->
-				<div class="header-section">
-					<!--menu-right-->
-					<div class="top_menu">
-						
-						<!--//profile_details-->
-					</div>
-					<!--//menu-right-->
-					<div class="clearfix"></div>
-				</div>
-				<!-- //header-ends -->
-				<div class="outter-wp">
-					<!--custom-widgets-->
-					<div class="custom-widgets">
-						<div class="row-one">
-							<div class="col-md-3 widget">
-								<div class="stats-left ">
-									<h5>Today</h5>
-									<h4> Users</h4>
-								</div>
-								<div class="stats-right">
-									<label>90</label>
-								</div>
-								<div class="clearfix"> </div>	
-							</div>
-							<div class="col-md-3 widget states-mdl">
-								<div class="stats-left">
-									<h5>Today</h5>
-									<h4>Visitors</h4>
-								</div>
-								<div class="stats-right">
-									<label> 85</label>
-								</div>
-								<div class="clearfix"> </div>	
-							</div>
-							<div class="col-md-3 widget states-thrd">
-								<div class="stats-left">
-									<h5>Today</h5>
-									<h4>Tasks</h4>
-								</div>
-								<div class="stats-right">
-									<label>51</label>
-								</div>
-								<div class="clearfix"> </div>	
-							</div>
-							<div class="col-md-3 widget states-last">
-								<div class="stats-left">
-									<h5>Today</h5>
-									<h4>Alerts</h4>
-								</div>
-								<div class="stats-right">
-									<label>30</label>
-								</div>
-								<div class="clearfix"> </div>	
-							</div>
-							<div class="clearfix"> </div>	
-						</div>
-					</div>
-					<!--//custom-widgets-->
-					<!--/candile-->
-					<div class="candile"> 
-						<div class="candile-inner">
-							<h3 class="sub-tittle">Candlestick Chart </h3>
-							<div id="center"><div id="fig">
-								<script type="text/javascript+protovis">
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
 
-									/* Parse dates. */
-									var dateFormat = pv.Format.date("%d-%b-%y");
-									vix.forEach(function(d) d.date = dateFormat.parse(d.date));
+    <header class="main-header">
+      <!-- Logo -->
+      <a href="index2.html" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><i class="fa fa-calendar-alt"></i></span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>Traveler</b></span>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
 
-									/* Scales. */
-									var w =1220,
-									h = 300,
-									x = pv.Scale.linear(vix, function(d) d.date).range(0, w),
-									y = pv.Scale.linear(vix, function(d) d.low, function(d) d.high).range(0, h).nice();
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <!-- Messages: style can be found in dropdown.less-->
+            <li class="dropdown messages-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-envelope-o"></i>
+                <span class="label label-success">4</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="header">You have 4 messages</li>
+                <li>
+                  <!-- inner menu: contains the actual data -->
+                  <ul class="menu">
+                    <li><!-- start message -->
+                      <a href="#">
+                        <div class="pull-left">
+                          <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        </div>
+                        <h4>
+                          Support Team
+                          <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                        </h4>
+                        <p>Why not buy a new awesome theme?</p>
+                      </a>
+                    </li>
+                    <!-- end message -->
+                    <li>
+                      <a href="#">
+                        <div class="pull-left">
+                          <img src="../dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        </div>
+                        <h4>
+                          AdminLTE Design Team
+                          <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                        </h4>
+                        <p>Why not buy a new awesome theme?</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="pull-left">
+                          <img src="../dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                        </div>
+                        <h4>
+                          Developers
+                          <small><i class="fa fa-clock-o"></i> Today</small>
+                        </h4>
+                        <p>Why not buy a new awesome theme?</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="pull-left">
+                          <img src="../dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        </div>
+                        <h4>
+                          Sales Department
+                          <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                        </h4>
+                        <p>Why not buy a new awesome theme?</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="pull-left">
+                          <img src="../dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                        </div>
+                        <h4>
+                          Reviewers
+                          <small><i class="fa fa-clock-o"></i> 2 days</small>
+                        </h4>
+                        <p>Why not buy a new awesome theme?</p>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="footer"><a href="#">See All Messages</a></li>
+              </ul>
+            </li>
+            <!-- Notifications: style can be found in dropdown.less -->
+            <li class="dropdown notifications-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-bell-o"></i>
+                <span class="label label-warning">10</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="header">You have 10 notifications</li>
+                <li>
+                  <!-- inner menu: contains the actual data -->
+                  <ul class="menu">
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                        page and may cause design problems
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-users text-red"></i> 5 new members joined
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-user text-red"></i> You changed your username
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="footer"><a href="#">View all</a></li>
+              </ul>
+            </li>
+            <!-- Tasks: style can be found in dropdown.less -->
+            <li class="dropdown tasks-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-flag-o"></i>
+                <span class="label label-danger">9</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="header">You have 9 tasks</li>
+                <li>
+                  <!-- inner menu: contains the actual data -->
+                  <ul class="menu">
+                    <li><!-- Task item -->
+                      <a href="#">
+                        <h3>
+                          Design some buttons
+                          <small class="pull-right">20%</small>
+                        </h3>
+                        <div class="progress xs">
+                          <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
+                          aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">20% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Create a nice theme
+                        <small class="pull-right">40%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar"
+                        aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                        <span class="sr-only">40% Complete</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- end task item -->
+                <li><!-- Task item -->
+                  <a href="#">
+                    <h3>
+                      Some task I need to do
+                      <small class="pull-right">60%</small>
+                    </h3>
+                    <div class="progress xs">
+                      <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar"
+                      aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                      <span class="sr-only">60% Complete</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <!-- end task item -->
+              <li><!-- Task item -->
+                <a href="#">
+                  <h3>
+                    Make beautiful transitions
+                    <small class="pull-right">80%</small>
+                  </h3>
+                  <div class="progress xs">
+                    <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar"
+                    aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                    <span class="sr-only">80% Complete</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <!-- end task item -->
+          </ul>
+        </li>
+        <li class="footer">
+          <a href="#">View all tasks</a>
+        </li>
+      </ul>
+    </li>
+    <!-- User Account: style can be found in dropdown.less -->
+    <li class="dropdown user user-menu">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+        <span class="hidden-xs">Alexander Pierce</span>
+      </a>
+      <ul class="dropdown-menu">
+        <!-- User image -->
+        <li class="user-header">
+          <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
-									var vis = new pv.Panel()
-									.width(w)
-									.height(h)
-									.margin(10)
-									.left(30);
+          <p>
+            Alexander Pierce - Web Developer
+            <small>Member since Nov. 2012</small>
+          </p>
+        </li>
+        <!-- Menu Body -->
+        <li class="user-body">
+          <div class="row">
+            <div class="col-xs-4 text-center">
+              <a href="#">Followers</a>
+            </div>
+            <div class="col-xs-4 text-center">
+              <a href="#">Sales</a>
+            </div>
+            <div class="col-xs-4 text-center">
+              <a href="#">Friends</a>
+            </div>
+          </div>
+          <!-- /.row -->
+        </li>
+        <!-- Menu Footer-->
+        <li class="user-footer">
+          <div class="pull-left">
+            <a href="#" class="btn btn-default btn-flat">Profile</a>
+          </div>
+          <div class="pull-right">
+            <a href="#" class="btn btn-default btn-flat">Sign out</a>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <!-- Control Sidebar Toggle Button -->
+    <li>
+      <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+    </li>
+  </ul>
+</div>
+</nav>
+</header>
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar">
+    <!-- Sidebar user panel -->
+    <div class="user-panel">
+      <div class="pull-left image">
+        <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+      </div>
+      <div class="pull-left info">
+        <p>Alexander Pierce</p>
+        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+      </div>
+    </div>
+    <!-- search form -->
+    <form action="#" method="get" class="sidebar-form">
+      <div class="input-group">
+        <input type="text" name="q" class="form-control" placeholder="Search...">
+        <span class="input-group-btn">
+          <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+          </button>
+        </span>
+      </div>
+    </form>
+    <!-- /.search form -->
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="sidebar-menu" data-widget="tree">
+      <li><a href="index.php"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
+      <li><a href="dafpesawat.php"><i class="fa fa-plane"></i><span>Daftar Pesawat</span></a></li>
+      <li><a href="dafrute.php"><i class="fa fa-plane"></i><span>Daftar Rute</span></a></li>
+      <li><a href="dafcostumer.php"><i class="fa fa-plane"></i><span>Daftar Costumer</span></a></li>
+      <li><a href="logout.php"><i class="fa fa-sign-out"></i><span>Logout</span></a></li>
+    </ul>
+  </section>
+  <!-- /.sidebar -->
+</aside>
 
-									/* Dates. */
-									vis.add(pv.Rule)
-									.data(x.ticks())
-									.left(x)
-									.strokeStyle("#eee")
-									.anchor("bottom").add(pv.Label)
-									.text(x.tickFormat);
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Dashboard
+      <small>Control panel</small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">Dashboard</li>
+    </ol>
+  </section>
 
-									/* Prices. */
-									vis.add(pv.Rule)
-									.data(y.ticks(7))
-									.bottom(y)
-									.left(-10)
-									.right(-10)
-									.strokeStyle(function(d) d % 10 ? "#ddd" : "#ddd")
-									.anchor("left").add(pv.Label)
-									.textStyle(function(d) d % 10 ? "#999" : "#ddd")
-									.text(y.tickFormat);
+  <!-- Main content -->
+  <section class="content">
+    <!-- Small boxes (Stat box) -->
+    <div class="row">
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-aqua">
+          <div class="inner">
+            <h3>150</h3>
 
-									/* Candlestick. */
-									vis.add(pv.Rule)
-									.data(vix)
-									.left(function(d) x(d.date))
-									.bottom(function(d) y(Math.min(d.high, d.low)))
-									.height(function(d) Math.abs(y(d.high) - y(d.low)))
-									.strokeStyle(function(d) d.open < d.close ? "#052963" : "#00C6D7")
-									.add(pv.Rule)
-									.bottom(function(d) y(Math.min(d.open, d.close)))
-									.height(function(d) Math.abs(y(d.open) - y(d.close)))
-									.lineWidth(10);
+            <p>New Orders</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-bag"></i>
+          </div>
+          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-green">
+          <div class="inner">
+            <h3>53<sup style="font-size: 20px">%</sup></h3>
 
-									vis.render();
+            <p>Bounce Rate</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-stats-bars"></i>
+          </div>
+          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-yellow">
+          <div class="inner">
+            <h3>44</h3>
 
-								</script>
-								<script type="text/javascript" src="js/protovis-d3.2.js"></script>
-								<script type="text/javascript" src="js/vix.js"></script>
+            <p>User Registrations</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-person-add"></i>
+          </div>
+          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-red">
+          <div class="inner">
+            <h3>65</h3>
 
-							</div>
-						</div>
-						
-					</div>
-					
-				</div>
-				<!--/candile-->
-				
-				<!--/charts-->
-				<div class="charts">
-					<div class="chrt-inner">
-						<div class="chrt-bars">
-							<div class="col-md-6 chrt-two">
-								<h3 class="sub-tittle">Bar Chart </h3>
-								<div id="chart2"></div>
-								<script src="js/fabochart.js"></script>
-								<script>
-									$(document).ready(function () {
-										data = {
-											'2010' : 300, 
-											'2011' : 200,
-											'2012' : 100,
-											'2013' : 500,
-											'2014' : 400,
-											'2015' : 200
-										};
+            <p>Unique Visitors</p>
+          </div>
+          <div class="icon">
+            <i class="ion ion-pie-graph"></i>
+          </div>
+          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <!-- ./col -->
+    </div>
+    <!-- /.row -->
+    <!-- Main row -->
+    <div class="row">
+      <!-- Left col -->
+      <section class="col-lg-7 connectedSortable">
+        <!-- Custom tabs (Charts with tabs)-->
+        <div class="nav-tabs-custom">
+          <!-- Tabs within a box -->
+          <ul class="nav nav-tabs pull-right">
+            <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
+            <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
+            <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
+          </ul>
+          <div class="tab-content no-padding">
+            <!-- Morris chart - Sales -->
+            <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
+            <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
+          </div>
+        </div>
+        <!-- /.nav-tabs-custom -->
 
-										$("#chart1").faBoChart({
-											time: 500,
-											animate: true,
-											instantAnimate: true,
-											straight: false,
-											data: data,
-											labelTextColor : "#002561",
-										});
-										$("#chart2").faBoChart({
-											time: 2500,
-											animate: true,
-											data: data,
-											straight: true,
-											labelTextColor : "#002561",
-										});
-									});
-								</script>
-							</div>
-							<div class="col-md-6 chrt-three">
-								<h3 class="sub-tittle">Error Chart </h3>
-								<div id="chartdiv"></div>	
-								<script>
-									var chart = AmCharts.makeChart( "chartdiv", {
-										"type": "serial",
-										"theme": "light",
-										"dataProvider": [ {
-											"year": 2005,
-											"value": 11.5,
-											"error": 5
-										}, {
-											"year": 2006,
-											"value": 26.2,
-											"error": 5
-										}, {
-											"year": 2007,
-											"value": 30.1,
-											"error": 5
-										}, {
-											"year": 2008,
-											"value": 29.5,
-											"error": 7
-										}, {
-											"year": 2009,
-											"value": 24.6,
-											"error": 10
-										} ],
-										"balloon": {
-											"textAlign": "left"
-										},
-										"valueAxes": [ {
-											"id": "v1",
-											"axisAlpha": 0
-										} ],
-										"startDuration": 1,
-										"graphs": [ {
-											"balloonText": "value:<b>[[value]]</b><br>error:<b>[[error]]</b>",
-											"bullet": "yError",
-											"bulletSize": 10,
-											"errorField": "error",
-											"lineThickness": 2,
-											"valueField": "value",
-											"bulletAxis": "v1",
-											"fillAlphas": 0
-										}, {
-											"bullet": "round",
-											"bulletBorderAlpha": 1,
-											"bulletBorderColor": "#FFFFFF",
-											"lineAlpha": 0,
-											"lineThickness": 2,
-											"showBalloon": false,
-											"valueField": "value"
+        <!-- Chat box -->
+        <div class="box box-success">
+          <div class="box-header">
+            <i class="fa fa-comments-o"></i>
 
-										} ],
-										"chartCursor": {
-											"cursorAlpha": 0,
-											"cursorPosition": "mouse",
-											"graphBulletSize": 1,
-											"zoomable": false
-										},
-										"categoryField": "year",
-										"categoryAxis": {
-											"gridPosition": "start",
-											"axisAlpha": 0
-										},
-										"export": {
-											"enabled": true
-										}
-									} );
-								</script>
-								
-								
-							</div>
-							<div class="clearfix"> </div>
-						</div>										
-						<!--/float-charts-->
-						<div class="pie">
-							<div class="col-md-6 chrt-two">
-								<h3 class="sub-tittle">Reversed Value Axis Chart</h3>
-								<div id="chartdiv2"></div>	
-								<script>
-									var chart = AmCharts.makeChart("chartdiv2", {
-										"type": "serial",
-										"theme": "patterns",
-										"legend": {
-											"useGraphSettings": true
-										},
-										"dataProvider": [{
-											"year": 1930,
-											"italy": 1,
-											"germany": 5,
-											"uk": 3
-										}, {
-											"year": 1934,
-											"italy": 1,
-											"germany": 2,
-											"uk": 6
-										}, {
-											"year": 1938,
-											"italy": 2,
-											"germany": 3,
-											"uk": 1
-										}, {
-											"year": 1950,
-											"italy": 3,
-											"germany": 4,
-											"uk": 1
-										}, {
-											"year": 1954,
-											"italy": 5,
-											"germany": 1,
-											"uk": 2
-										}, {
-											"year": 1958,
-											"italy": 3,
-											"germany": 2,
-											"uk": 1
-										}, {
-											"year": 1962,
-											"italy": 1,
-											"germany": 2,
-											"uk": 3
-										}, {
-											"year": 1966,
-											"italy": 2,
-											"germany": 1,
-											"uk": 5
-										}, {
-											"year": 1970,
-											"italy": 3,
-											"germany": 5,
-											"uk": 2
-										}, {
-											"year": 1974,
-											"italy": 4,
-											"germany": 3,
-											"uk": 6
-										}, {
-											"year": 1978,
-											"italy": 1,
-											"germany": 2,
-											"uk": 4
-										}],
-										"valueAxes": [{
-											"integersOnly": true,
-											"maximum": 6,
-											"minimum": 1,
-											"reversed": true,
-											"axisAlpha": 0,
-											"dashLength": 5,
-											"gridCount": 10,
-											"position": "left",
-											"title": "Place taken"
-										}],
-										"startDuration": 0.5,
-										"graphs": [{
-											"balloonText": "place taken by Italy in [[category]]: [[value]]",
-											"bullet": "round",
-											"hidden": true,
-											"title": "Italy",
-											"valueField": "italy",
-											"fillAlphas": 0
-										}, {
-											"balloonText": "place taken by Germany in [[category]]: [[value]]",
-											"bullet": "round",
-											"title": "Germany",
-											"valueField": "germany",
-											"fillAlphas": 0
-										}, {
-											"balloonText": "place taken by UK in [[category]]: [[value]]",
-											"bullet": "round",
-											"title": "United Kingdom",
-											"valueField": "uk",
-											"fillAlphas": 0
-										}],
-										"chartCursor": {
-											"cursorAlpha": 0,
-											"zoomable": false
-										},
-										"categoryField": "year",
-										"categoryAxis": {
-											"gridPosition": "start",
-											"axisAlpha": 0,
-											"fillAlpha": 0.05,
-											"fillColor": "#000000",
-											"gridAlpha": 0,
-											"position": "top"
-										},
-										"export": {
-											"enabled": true,
-											"position": "bottom-right"
-										}
-									});
-								</script>
-								
-							</div>
-							<div class="col-md-6 chrt-three second">
-								<h3 class="sub-tittle">Radar chart</h3>
-								<div id="chartdiv4"></div>	
-								<script>
-									var chart = AmCharts.makeChart( "chartdiv4", {
-										"type": "radar",
-										"theme": "light",
-										"dataProvider": [ {
-											"direction": "N",
-											"value": 8
-										}, {
-											"direction": "NE",
-											"value": 9
-										}, {
-											"direction": "E",
-											"value": 4.5
-										}, {
-											"direction": "SE",
-											"value": 3.5
-										}, {
-											"direction": "S",
-											"value": 9.2
-										}, {
-											"direction": "SW",
-											"value": 8.4
-										}, {
-											"direction": "W",
-											"value": 11.1
-										}, {
-											"direction": "NW",
-											"value": 10
-										} ],
-										"valueAxes": [ {
-											"gridType": "circles",
-											"minimum": 0,
-											"autoGridCount": false,
-											"axisAlpha": 0.2,
-											"fillAlpha": 0.05,
-											"fillColor": "#FFFFFF",
-											"gridAlpha": 0.08,
-											"guides": [ {
-												"angle": 225,
-												"fillAlpha": 0.7,
-												"fillColor": "#052963",
-												"tickLength": 0,
-												"toAngle": 315,
-												"toValue": 14,
-												"value": 0,
-												"lineAlpha": 0,
+            <h3 class="box-title">Chat</h3>
 
-											}, {
-												"angle": 45,
-												"fillAlpha": 0.6,
-												"fillColor": "#ea4c89",
-												"tickLength": 0,
-												"toAngle": 135,
-												"toValue": 14,
-												"value": 0,
-												"lineAlpha": 0,
-											} ],
-											"position": "left"
-										} ],
-										"startDuration": 1,
-										"graphs": [ {
-											"balloonText": "[[category]]: [[value]] m/s",
-											"bullet": "round",
-											"fillAlphas": 0.3,
-											"valueField": "value"
-										} ],
-										"categoryField": "direction",
-										"export": {
-											"enabled": true
-										}
-									} );
-								</script>
-								
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="area">
-							<div class="col-md-6 chrt-two area">
-								<h3 class="sub-tittle">Line Multi Chart</h3>
-								<div style="area">
-									<canvas id="canvas" style="width:100%;height:100%"></canvas>
-								</div>
-								<button id="randomizeData">Randomize Data</button>
-								<script>
-									var randomScalingFactor = function() {
-										return Math.round(Math.random() * 100 * (Math.random() > 0.5 ? -1 : 1));
-									};
-									var randomColor = function(opacity) {
-										return 'rgba(' + Math.round(Math.random() * 255) + ',' + Math.round(Math.random() * 255) + ',' + Math.round(Math.random() * 255) + ',' + (opacity || '.3') + ')';
-									};
+            <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
+              <div class="btn-group" data-toggle="btn-toggle">
+                <button type="button" class="btn btn-default btn-sm active"><i class="fa fa-square text-green"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-square text-red"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="box-body chat" id="chat-box">
+            <!-- chat item -->
+            <div class="item">
+              <img src="../dist/img/user4-128x128.jpg" alt="user image" class="online">
 
-									var lineChartData = {
-										labels: ["January", "February", "March", "April", "May", "June", "July"],
-										datasets: [{
-											label: "My First dataset",
-											data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-											yAxisID: "y-axis-1",
-										}, {
-											label: "My Second dataset",
-											data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-											yAxisID: "y-axis-2"
-										}]
-									};
+              <p class="message">
+                <a href="#" class="name">
+                  <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
+                  Mike Doe
+                </a>
+                I would like to meet you to discuss the latest news about
+                the arrival of the new theme. They say it is going to be one the
+                best themes on the market
+              </p>
+              <div class="attachment">
+                <h4>Attachments:</h4>
 
-									$.each(lineChartData.datasets, function(i, dataset) {
-										dataset.borderColor = randomColor(0.4);
-										dataset.backgroundColor = randomColor(1);
-										dataset.pointBorderColor = randomColor(0.7);
-										dataset.pointBackgroundColor = randomColor(0.5);
-										dataset.pointBorderWidth = 1;
-									});
+                <p class="filename">
+                  Theme-thumbnail-image.jpg
+                </p>
 
-									console.log(lineChartData);
+                <div class="pull-right">
+                  <button type="button" class="btn btn-primary btn-sm btn-flat">Open</button>
+                </div>
+              </div>
+              <!-- /.attachment -->
+            </div>
+            <!-- /.item -->
+            <!-- chat item -->
+            <div class="item">
+              <img src="../dist/img/user3-128x128.jpg" alt="user image" class="offline">
 
-									window.onload = function() {
-										var ctx = document.getElementById("canvas").getContext("2d");
-										window.myLine = Chart.Line(ctx, {
-											data: lineChartData,
-											options: {
-												
-												hoverMode: 'label',
-												stacked: false,
-												scales: {
-													xAxes: [{
-														display: true,
-														gridLines: {
-															offsetGridLines: false
-														}
-													}],
-													yAxes: [{
-																					type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
-																					display: true,
-																					position: "left",
-																					id: "y-axis-1",
-																				}, {
-																					type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
-																					display: true,
-																					position: "right",
-																					id: "y-axis-2",
+              <p class="message">
+                <a href="#" class="name">
+                  <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:15</small>
+                  Alexander Pierce
+                </a>
+                I would like to meet you to discuss the latest news about
+                the arrival of the new theme. They say it is going to be one the
+                best themes on the market
+              </p>
+            </div>
+            <!-- /.item -->
+            <!-- chat item -->
+            <div class="item">
+              <img src="../dist/img/user2-160x160.jpg" alt="user image" class="offline">
 
-																					// grid line settings
-																					gridLines: {
-																						drawOnChartArea: false, // only want the grid lines for one axis to show up
-																					},
-																				}],
-																			}
-																		}
-																	});
-									};
+              <p class="message">
+                <a href="#" class="name">
+                  <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:30</small>
+                  Susan Doe
+                </a>
+                I would like to meet you to discuss the latest news about
+                the arrival of the new theme. They say it is going to be one the
+                best themes on the market
+              </p>
+            </div>
+            <!-- /.item -->
+          </div>
+          <!-- /.chat -->
+          <div class="box-footer">
+            <div class="input-group">
+              <input class="form-control" placeholder="Type message...">
 
-									$('#randomizeData').click(function() {
-										lineChartData.datasets[0].data = [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()];
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-success"><i class="fa fa-plus"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.box (chat box) -->
 
-										lineChartData.datasets[1].data = [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()];
+        <!-- TO DO List -->
+        <div class="box box-primary">
+          <div class="box-header">
+            <i class="ion ion-clipboard"></i>
 
-										window.myLine.update();
-									});
-								</script>
-								<script src="js/Chart.js"></script>
-							</div>
-							<div class="col-md-6 chrt-three">
-								<h3 class="sub-tittle">Stacked bar chart</h3>
-								<div id="chartdiv1"></div>	
-								
-								<script>
-									var chart = AmCharts.makeChart("chartdiv1", {
-										"type": "serial",
-										"theme": "light",
-										"rotate": true,
-										"marginBottom": 50,
-										"dataProvider": [{
-											"age": "85+",
-											"male": -0.1,
-											"female": 0.3
-										}, {
-											"age": "80-54",
-											"male": -0.2,
-											"female": 0.3
-										}, {
-											"age": "75-79",
-											"male": -0.3,
-											"female": 0.6
-										}, {
-											"age": "70-74",
-											"male": -0.5,
-											"female": 0.8
-										}, {
-											"age": "65-69",
-											"male": -0.8,
-											"female": 1.0
-										}, {
-											"age": "60-64",
-											"male": -1.1,
-											"female": 1.3
-										}, {
-											"age": "55-59",
-											"male": -1.7,
-											"female": 1.9
-										}, {
-											"age": "50-54",
-											"male": -2.2,
-											"female": 2.5
-										}, {
-											"age": "45-49",
-											"male": -2.8,
-											"female": 3.0
-										}, {
-											"age": "40-44",
-											"male": -3.4,
-											"female": 3.6
-										}, {
-											"age": "35-39",
-											"male": -4.2,
-											"female": 4.1
-										}, {
-											"age": "30-34",
-											"male": -5.2,
-											"female": 4.8
-										}, {
-											"age": "25-29",
-											"male": -5.6,
-											"female": 5.1
-										}, {
-											"age": "20-24",
-											"male": -5.1,
-											"female": 5.1
-										}, {
-											"age": "15-19",
-											"male": -3.8,
-											"female": 3.8
-										}, {
-											"age": "10-14",
-											"male": -3.2,
-											"female": 3.4
-										}, {
-											"age": "5-9",
-											"male": -4.4,
-											"female": 4.1
-										}, {
-											"age": "0-4",
-											"male": -5.0,
-											"female": 4.8
-										}],
-										"startDuration": 1,
-										"graphs": [{
-											"fillAlphas": 0.8,
-											"lineAlpha": 0.2,
-											"type": "column",
-											"valueField": "male",
-											"title": "Male",
-											"labelText": "[[value]]",
-											"clustered": false,
-											"labelFunction": function(item) {
-												return Math.abs(item.values.value);
-											},
-											"balloonFunction": function(item) {
-												return item.category + ": " + Math.abs(item.values.value) + "%";
-											}
-										}, {
-											"fillAlphas": 0.8,
-											"lineAlpha": 0.2,
-											"type": "column",
-											"valueField": "female",
-											"title": "Female",
-											"labelText": "[[value]]",
-											"clustered": false,
-											"labelFunction": function(item) {
-												return Math.abs(item.values.value);
-											},
-											"balloonFunction": function(item) {
-												return item.category + ": " + Math.abs(item.values.value) + "%";
-											}
-										}],
-										"categoryField": "age",
-										"categoryAxis": {
-											"gridPosition": "start",
-											"gridAlpha": 0.2,
-											"axisAlpha": 0
-										},
-										"valueAxes": [{
-											"gridAlpha": 0,
-											"ignoreAxisWidth": true,
-											"labelFunction": function(value) {
-												return Math.abs(value) + '%';
-											},
-											"guides": [{
-												"value": 0,
-												"lineAlpha": 0.2
-											}]
-										}],
-										"balloon": {
-											"fixedPosition": true
-										},
-										"chartCursor": {
-											"valueBalloonsEnabled": false,
-											"cursorAlpha": 0.05,
-											"fullWidth": true
-										},
-										"allLabels": [{
-											"text": "Male",
-											"x": "28%",
-											"y": "97%",
-											"bold": true,
-											"align": "middle"
-										}, {
-											"text": "Female",
-											"x": "75%",
-											"y": "97%",
-											"bold": true,
-											"align": "middle"
-										}],
-										"export": {
-											"enabled": true
-										}   
+            <h3 class="box-title">To Do List</h3>
 
-									});
-								</script>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<!--//weather-charts-->
-						<div class="graph-visualization">
-							<div class="col-md-6 map-1">
-								<h3 class="sub-tittle">Weather </h3>
-								<div class="weather">
-									<div class="weather-top">
-										<div class="weather-top-left">
-											<div class="degree">
-												<figure class="icons">
-													<canvas id="partly-cloudy-day" width="64" height="64">
-													</canvas>
-												</figure>
-												<span>37°</span>
-												<div class="clearfix"></div>
-											</div>
-											<script>
-												var icons = new Skycons({"color": "#002561"}),
-												list  = [
-												"clear-night", "partly-cloudy-day",
-												"partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
-												"fog"
-												],
-												i;
+            <div class="box-tools pull-right">
+              <ul class="pagination pagination-sm inline">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <!-- See dist/js/pages/dashboard.js to activate the todoList plugin -->
+            <ul class="todo-list">
+              <li>
+                <!-- drag handle -->
+                <span class="handle">
+                  <i class="fa fa-ellipsis-v"></i>
+                  <i class="fa fa-ellipsis-v"></i>
+                </span>
+                <!-- checkbox -->
+                <input type="checkbox" value="">
+                <!-- todo text -->
+                <span class="text">Design a nice theme</span>
+                <!-- Emphasis label -->
+                <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
+                <!-- General tools such as edit or delete-->
+                <div class="tools">
+                  <i class="fa fa-edit"></i>
+                  <i class="fa fa-trash-o"></i>
+                </div>
+              </li>
+              <li>
+                <span class="handle">
+                  <i class="fa fa-ellipsis-v"></i>
+                  <i class="fa fa-ellipsis-v"></i>
+                </span>
+                <input type="checkbox" value="">
+                <span class="text">Make the theme responsive</span>
+                <small class="label label-info"><i class="fa fa-clock-o"></i> 4 hours</small>
+                <div class="tools">
+                  <i class="fa fa-edit"></i>
+                  <i class="fa fa-trash-o"></i>
+                </div>
+              </li>
+              <li>
+                <span class="handle">
+                  <i class="fa fa-ellipsis-v"></i>
+                  <i class="fa fa-ellipsis-v"></i>
+                </span>
+                <input type="checkbox" value="">
+                <span class="text">Let theme shine like a star</span>
+                <small class="label label-warning"><i class="fa fa-clock-o"></i> 1 day</small>
+                <div class="tools">
+                  <i class="fa fa-edit"></i>
+                  <i class="fa fa-trash-o"></i>
+                </div>
+              </li>
+              <li>
+                <span class="handle">
+                  <i class="fa fa-ellipsis-v"></i>
+                  <i class="fa fa-ellipsis-v"></i>
+                </span>
+                <input type="checkbox" value="">
+                <span class="text">Let theme shine like a star</span>
+                <small class="label label-success"><i class="fa fa-clock-o"></i> 3 days</small>
+                <div class="tools">
+                  <i class="fa fa-edit"></i>
+                  <i class="fa fa-trash-o"></i>
+                </div>
+              </li>
+              <li>
+                <span class="handle">
+                  <i class="fa fa-ellipsis-v"></i>
+                  <i class="fa fa-ellipsis-v"></i>
+                </span>
+                <input type="checkbox" value="">
+                <span class="text">Check your messages and notifications</span>
+                <small class="label label-primary"><i class="fa fa-clock-o"></i> 1 week</small>
+                <div class="tools">
+                  <i class="fa fa-edit"></i>
+                  <i class="fa fa-trash-o"></i>
+                </div>
+              </li>
+              <li>
+                <span class="handle">
+                  <i class="fa fa-ellipsis-v"></i>
+                  <i class="fa fa-ellipsis-v"></i>
+                </span>
+                <input type="checkbox" value="">
+                <span class="text">Let theme shine like a star</span>
+                <small class="label label-default"><i class="fa fa-clock-o"></i> 1 month</small>
+                <div class="tools">
+                  <i class="fa fa-edit"></i>
+                  <i class="fa fa-trash-o"></i>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- /.box-body -->
+          <div class="box-footer clearfix no-border">
+            <button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</button>
+          </div>
+        </div>
+        <!-- /.box -->
 
-												for(i = list.length; i--; )
-													icons.set(list[i], list[i]);
+        <!-- quick email widget -->
+        <div class="box box-info">
+          <div class="box-header">
+            <i class="fa fa-envelope"></i>
 
-												icons.play();
-											</script>
-											<p>FRIDAY
-												<label>13</label>
-												<sup>th</sup>
-												AUG
-											</p>
-										</div>
-										<div class="weather-top-right">
-											<p><i class="fa fa-map-marker"></i>Location</p>
-											<label>Lorem ipsum</label>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
-									<div class="weather-bottom">
-										<div class="weather-bottom1">
-											<div class="weather-head">
-												<h4>Cloudy</h4>
-												<figure class="icons">
-													<canvas id="cloudy" width="40" height="40"></canvas>
-												</figure>					
-												<script>
-													var icons = new Skycons({"color": "#00C6D7"}),
-													list  = [
-													"clear-night", "cloudy",
-													"partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
-													"fog"
-													],
-													i;
+            <h3 class="box-title">Quick Email</h3>
+            <!-- tools box -->
+            <div class="pull-right box-tools">
+              <button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip"
+              title="Remove">
+              <i class="fa fa-times"></i></button>
+            </div>
+            <!-- /. tools -->
+          </div>
+          <div class="box-body">
+            <form action="#" method="post">
+              <div class="form-group">
+                <input type="email" class="form-control" name="emailto" placeholder="Email to:">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" placeholder="Subject">
+              </div>
+              <div>
+                <textarea class="textarea" placeholder="Message"
+                style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="box-footer clearfix">
+            <button type="button" class="pull-right btn btn-default" id="sendEmail">Send
+              <i class="fa fa-arrow-circle-right"></i></button>
+            </div>
+          </div>
 
-													for(i = list.length; i--; )
-														icons.set(list[i], list[i]);
+        </section>
+        <!-- /.Left col -->
+        <!-- right col (We are only adding the ID to make the widgets sortable)-->
+        <section class="col-lg-5 connectedSortable">
 
-													icons.play();
-												</script>
-												<h6>20°</h6>
-												<div class="bottom-head">
-													<p>Monday</p>
-												</div>
-											</div>
-										</div>
-										<div class="weather-bottom1 ">
-											<div class="weather-head">
-												<h4>Sunny</h4>
-												<figure class="icons">
-													<canvas id="clear-day" width="40" height="40">
-													</canvas>	
-													
-												</figure>					
-												<script>
-													var icons = new Skycons({"color": "#00C6D7"}),
-													list  = [
-													"clear-night", "clear-day",
-													"partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
-													"fog"
-													],
-													i;
+          <!-- Map box -->
+          <div class="box box-solid bg-light-blue-gradient">
+            <div class="box-header">
+              <!-- tools box -->
+              <div class="pull-right box-tools">
+                <button type="button" class="btn btn-primary btn-sm daterange pull-right" data-toggle="tooltip"
+                title="Date range">
+                <i class="fa fa-calendar"></i></button>
+                <button type="button" class="btn btn-primary btn-sm pull-right" data-widget="collapse"
+                data-toggle="tooltip" title="Collapse" style="margin-right: 5px;">
+                <i class="fa fa-minus"></i></button>
+              </div>
+              <!-- /. tools -->
 
-													for(i = list.length; i--; )
-														icons.set(list[i], list[i]);
+              <i class="fa fa-map-marker"></i>
 
-													icons.play();
-												</script>
-												<h6>37°</h6>
-												<div class="bottom-head">
-													<p>Tuesday</p>
-												</div>
-											</div>
-										</div>
-										<div class="weather-bottom1">
-											<div class="weather-head">
-												<h4>Rainy</h4>
-												<figure class="icons">
-													<canvas id="sleet" width="40" height="40">
-													</canvas>
-												</figure>
-												<script>
-													var icons = new Skycons({"color": "#00C6D7"}),
-													list  = [
-													"clear-night", "clear-day",
-													"partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
-													"fog"
-													],
-													i;
+              <h3 class="box-title">
+                Visitors
+              </h3>
+            </div>
+            <div class="box-body">
+              <div id="world-map" style="height: 250px; width: 100%;"></div>
+            </div>
+            <!-- /.box-body-->
+            <div class="box-footer no-border">
+              <div class="row">
+                <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                  <div id="sparkline-1"></div>
+                  <div class="knob-label">Visitors</div>
+                </div>
+                <!-- ./col -->
+                <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                  <div id="sparkline-2"></div>
+                  <div class="knob-label">Online</div>
+                </div>
+                <!-- ./col -->
+                <div class="col-xs-4 text-center">
+                  <div id="sparkline-3"></div>
+                  <div class="knob-label">Exists</div>
+                </div>
+                <!-- ./col -->
+              </div>
+              <!-- /.row -->
+            </div>
+          </div>
+          <!-- /.box -->
 
-													for(i = list.length; i--; )
-														icons.set(list[i], list[i]);
+          <!-- solid sales graph -->
+          <div class="box box-solid bg-teal-gradient">
+            <div class="box-header">
+              <i class="fa fa-th"></i>
 
-													icons.play();
-												</script>
-												
-												<h6>7°</h6>
-												<div class="bottom-head">
-													<p>Wednesday</p>
-												</div>
-											</div>
-										</div>
-										<div class="weather-bottom1 ">
-											<div class="weather-head">
-												<h4>Snowy</h4>
-												<figure class="icons">
-													<canvas id="snow" width="40" height="40">
-													</canvas>
-												</figure>
-												<script>
-													var icons = new Skycons({"color": "#00C6D7"}),
-													list  = [
-													"clear-night", "clear-day",
-													"partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
-													"fog"
-													],
-													i;
+              <h3 class="box-title">Sales Graph</h3>
 
-													for(i = list.length; i--; )
-														icons.set(list[i], list[i]);
+              <div class="box-tools pull-right">
+                <button type="button" class="btn bg-teal btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn bg-teal btn-sm" data-widget="remove"><i class="fa fa-times"></i>
+                </button>
+              </div>
+            </div>
+            <div class="box-body border-radius-none">
+              <div class="chart" id="line-chart" style="height: 250px;"></div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer no-border">
+              <div class="row">
+                <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                  <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60"
+                  data-fgColor="#39CCCC">
 
-													icons.play();
-												</script>
-												<h6>-10°</h6>
-												<div class="bottom-head">
-													<p>Thursday</p>
-												</div>
-											</div>
-										</div>
-										<div class="clearfix"> </div>
-									</div>
+                  <div class="knob-label">Mail-Orders</div>
+                </div>
+                <!-- ./col -->
+                <div class="col-xs-4 text-center" style="border-right: 1px solid #f4f4f4">
+                  <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60"
+                  data-fgColor="#39CCCC">
 
-								</div>
+                  <div class="knob-label">Online</div>
+                </div>
+                <!-- ./col -->
+                <div class="col-xs-4 text-center">
+                  <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60"
+                  data-fgColor="#39CCCC">
 
-							</div>
-							<div class="col-md-6 map-2">
-								<div class="profile-nav alt">
-									<section class="panel">
-										<div class="user-heading alt clock-row terques-bg">
-											<h3 class="sub-tittle clock">Easy Clock </h3>
-										</div>
-										<ul id="clock">
-											<li id="sec"></li>
-											<li id="hour"></li>
-											<li id="min"></li>
-										</ul>
+                  <div class="knob-label">In-Store</div>
+                </div>
+                <!-- ./col -->
+              </div>
+              <!-- /.row -->
+            </div>
+            <!-- /.box-footer -->
+          </div>
+          <!-- /.box -->
 
-										<ul class="clock-category">
-											<li>
-												<a href="#" class="active">
-													<img src="images/time.png" alt="">
-													<span>Clock</span>
-												</a>
-											</li>
-											<li>
-												<a href="#">
-													<img src="images/alarm.png" alt="">
-													<span>Alarm</span>
-												</a>
-											</li>
-											<li>
-												<a href="#">
-													<img src="images/watch.png" alt="">
-													<span>Stop watch</span>
-												</a>
-											</li>
-											<li>
-												<a href="#">
-													<img src="images/timer.png" alt="">
-													<span>Timer</span>
-												</a>
-											</li>
-										</ul>
+          <!-- Calendar -->
+          <div class="box box-solid bg-green-gradient">
+            <div class="box-header">
+              <i class="fa fa-calendar"></i>
 
-									</section>
+              <h3 class="box-title">Calendar</h3>
+              <!-- tools box -->
+              <div class="pull-right box-tools">
+                <!-- button with a dropdown -->
+                <div class="btn-group">
+                  <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-bars"></i></button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                      <li><a href="#">Add new event</a></li>
+                      <li><a href="#">Clear events</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">View calendar</a></li>
+                    </ul>
+                  </div>
+                  <button type="button" class="btn btn-success btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-success btn-sm" data-widget="remove"><i class="fa fa-times"></i>
+                  </button>
+                </div>
+                <!-- /. tools -->
+              </div>
+              <!-- /.box-header -->
+              <div class="box-body no-padding">
+                <!--The calendar -->
+                <div id="calendar" style="width: 100%"></div>
+              </div>
+              <!-- /.box-body -->
+              <div class="box-footer text-black">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <!-- Progress bars -->
+                    <div class="clearfix">
+                      <span class="pull-left">Task #1</span>
+                      <small class="pull-right">90%</small>
+                    </div>
+                    <div class="progress xs">
+                      <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
+                    </div>
 
-								</div>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
+                    <div class="clearfix">
+                      <span class="pull-left">Task #2</span>
+                      <small class="pull-right">70%</small>
+                    </div>
+                    <div class="progress xs">
+                      <div class="progress-bar progress-bar-green" style="width: 70%;"></div>
+                    </div>
+                  </div>
+                  <!-- /.col -->
+                  <div class="col-sm-6">
+                    <div class="clearfix">
+                      <span class="pull-left">Task #3</span>
+                      <small class="pull-right">60%</small>
+                    </div>
+                    <div class="progress xs">
+                      <div class="progress-bar progress-bar-green" style="width: 60%;"></div>
+                    </div>
 
-						<!--//charts-->
-						<div class="area-charts">
-							<div class="col-md-6 panel-chrt">
-								<h3 class="sub-tittle dyna">Dynamic Speedometer </h3>
-								<div id="wrapper">
-									<div id="left">
-										<div>
-											<label for='miles'>Miles:</label> <input type="text" name="miles" id="miles" />
-										</div>
-										<div>
-											<label for='kilometers'>Kilometers:</label> <input type="text" name="kilometers" id="kilometers" />
-										</div>
-										<p id="errmsg"></p>
-									</div>
+                    <div class="clearfix">
+                      <span class="pull-left">Task #4</span>
+                      <small class="pull-right">40%</small>
+                    </div>
+                    <div class="progress xs">
+                      <div class="progress-bar progress-bar-green" style="width: 40%;"></div>
+                    </div>
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+            </div>
+            <!-- /.box -->
 
-									<div id="gauge">
-										<div id="circle"></div>
-										<div id="numbers"></div>
-										<div id="mi-km"></div>
-										<div id="needle"></div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 tini-time-line">
-								<h3 class="sub-tittle">Time line </h3>
-								<ul class="timeline">
-									<li>
-										<div class="timeline-badge info"><i class="fa fa-smile-o"></i></div>
-										<div class="timeline-panel">
-											<div class="timeline-heading">
-												<h4 class="timeline-title">Title</h4>
-											</div>
-											<div class="timeline-body">
-												<p>Description...</p>
-											</div>
-										</div>
-									</li>
-									
-									<li>
-										<div class="timeline-badge primary"><i class="fa fa-star-o"></i></div>
-										<div class="timeline-panel">
-											<div class="timeline-heading">
-												<h4 class="timeline-title">Title</h4>
-											</div>
-											<div class="timeline-body">
-												<p>Description...</p>
-											</div>
-										</div>
-									</li>
-									
-									
-									
-									<li>
-										<div class="timeline-badge danger"><i class="fa fa-times-circle-o"></i></div>
-										<div class="timeline-panel">
-											<div class="timeline-heading">
-												<h4 class="timeline-title">Title</h4>
-											</div>
-											<div class="timeline-body">
-												<p>Description...</p>
-											</div>
-										</div>
-									</li>
-									
-									<li>
-										<div class="timeline-badge success"><i class="fa fa-check-circle-o"></i></div>
-										<div class="timeline-panel">
-											<div class="timeline-heading">
-												<h4 class="timeline-title">Title</h4>
-											</div>
-											<div class="timeline-body">
-												<p>Description...</p>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-							<div class="clearfix"></div>		
-						</div>
-						<!--/bottom-grids-->		 
-						<div class="bottom-grids">
-							<div class="dev-table">    
-								<div class="col-md-4 dev-col">                                    
+          </section>
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
 
-									<div class="dev-widget dev-widget-transparent">
-										<h2 class="inner one">Server Usage</h2>
-										<p>Today server usage in percentages</p>                                        
-										<div class="dev-stat"><span class="counter">68</span>%</div>                                                                                
-										<div class="progress progress-bar-xs">
-											<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
-										</div>                                        
-										<p>We Todayly recommend you change your plan to <strong>Pro</strong>. Click here to get more details.</p>
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+      <div class="pull-right hidden-xs">
+        <b>Version</b> 2.4.0
+      </div>
+      <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+      reserved.
+    </footer>
 
-										<a href="#" class="dev-drop">Take a closer look <span class="fa fa-angle-right pull-right"></span></a>
-									</div>
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Create the tabs -->
+      <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+        <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+        <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <!-- Home tab content -->
+        <div class="tab-pane" id="control-sidebar-home-tab">
+          <h3 class="control-sidebar-heading">Recent Activity</h3>
+          <ul class="control-sidebar-menu">
+            <li>
+              <a href="javascript:void(0)">
+                <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
-								</div>
-								<div class="col-md-4 dev-col mid">                                    
+                <div class="menu-info">
+                  <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
 
-									<div class="dev-widget dev-widget-transparent dev-widget-success">
-										<h3 class="inner">Today Earnings</h3>
-										<p>This is Today earnings per last year</p>                                        
-										<div class="dev-stat">$<span class="counter">75,332</span></div>                                                                                
-										<div class="progress progress-bar-xs">
-											<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 79%;"></div>
-										</div>                                        
-										<p>We happy to notice you that you become an Elite customer, and you can get some custom sugar.</p>
+                  <p>Will be 23 on April 24th</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <i class="menu-icon fa fa-user bg-yellow"></i>
 
-										<a href="#" class="dev-drop">Take a closer look <span class="fa fa-angle-right pull-right"></span></a>
-									</div>
+                <div class="menu-info">
+                  <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
 
-								</div>
-								<div class="col-md-4 dev-col">                                    
+                  <p>New phone +1(800)555-1234</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
 
-									<div class="dev-widget dev-widget-transparent dev-widget-danger">
-										<h3 class="inner">Your Balance</h3>
-										<p>All your earnings for this time</p>
-										<div class="dev-stat">$<span class="counter">5,321</span></div>                                                                                
-										<div class="progress progress-bar-xs">
-											<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
-										</div>                                        
-										<p>You can withdraw this money in end of each month. Also you can spend it on our marketplace.</p>
+                <div class="menu-info">
+                  <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
 
-										<a href="#" class="dev-drop">Take a closer look <span class="fa fa-angle-right pull-right"></span></a>                                        
-									</div>
+                  <p>nora@example.com</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <i class="menu-icon fa fa-file-code-o bg-green"></i>
 
-								</div>
-								<div class="clearfix"></div>		
-								
-							</div>
-						</div>
-						<!--//bottom-grids-->
-						
-					</div>
-					<!--/charts-inner-->
-				</div>
-				<!--//outer-wp-->
-			</div>
-			<!--footer section start-->
-			
-			<!--footer section end-->
-		</div>
-	</div>
-	<!--//content-inner-->
-	<!--/sidebar-menu-->
-	<?php require_once 'page/navbar.php' ?>
-<!--js -->
-<link rel="stylesheet" href="css/vroom.css">
-<script type="text/javascript" src="js/vroom.js"></script>
-<script type="text/javascript" src="js/TweenLite.min.js"></script>
-<script type="text/javascript" src="js/CSSPlugin.min.js"></script>
-<script src="js/jquery.nicescroll.js"></script>
-<script src="js/scripts.js"></script>
+                <div class="menu-info">
+                  <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+                  <p>Execution time 5 seconds</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- /.control-sidebar-menu -->
+
+          <h3 class="control-sidebar-heading">Tasks Progress</h3>
+          <ul class="control-sidebar-menu">
+            <li>
+              <a href="javascript:void(0)">
+                <h4 class="control-sidebar-subheading">
+                  Custom Template Design
+                  <span class="label label-danger pull-right">70%</span>
+                </h4>
+
+                <div class="progress progress-xxs">
+                  <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <h4 class="control-sidebar-subheading">
+                  Update Resume
+                  <span class="label label-success pull-right">95%</span>
+                </h4>
+
+                <div class="progress progress-xxs">
+                  <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <h4 class="control-sidebar-subheading">
+                  Laravel Integration
+                  <span class="label label-warning pull-right">50%</span>
+                </h4>
+
+                <div class="progress progress-xxs">
+                  <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <h4 class="control-sidebar-subheading">
+                  Back End Framework
+                  <span class="label label-primary pull-right">68%</span>
+                </h4>
+
+                <div class="progress progress-xxs">
+                  <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- /.control-sidebar-menu -->
+
+        </div>
+        <!-- /.tab-pane -->
+        <!-- Stats tab content -->
+        <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+        <!-- /.tab-pane -->
+        <!-- Settings tab content -->
+        <div class="tab-pane" id="control-sidebar-settings-tab">
+          <form method="post">
+            <h3 class="control-sidebar-heading">General Settings</h3>
+
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
+                Report panel usage
+                <input type="checkbox" class="pull-right" checked>
+              </label>
+
+              <p>
+                Some information about this general settings option
+              </p>
+            </div>
+            <!-- /.form-group -->
+
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
+                Allow mail redirect
+                <input type="checkbox" class="pull-right" checked>
+              </label>
+
+              <p>
+                Other sets of options are available
+              </p>
+            </div>
+            <!-- /.form-group -->
+
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
+                Expose author name in posts
+                <input type="checkbox" class="pull-right" checked>
+              </label>
+
+              <p>
+                Allow the user to show his name in blog posts
+              </p>
+            </div>
+            <!-- /.form-group -->
+
+            <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
+                Show me as online
+                <input type="checkbox" class="pull-right" checked>
+              </label>
+            </div>
+            <!-- /.form-group -->
+
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
+                Turn off notifications
+                <input type="checkbox" class="pull-right">
+              </label>
+            </div>
+            <!-- /.form-group -->
+
+            <div class="form-group">
+              <label class="control-sidebar-subheading">
+                Delete chat history
+                <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+              </label>
+            </div>
+            <!-- /.form-group -->
+          </form>
+        </div>
+        <!-- /.tab-pane -->
+      </div>
+    </aside>
+    <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Morris.js charts -->
+<script src="../bower_components/raphael/raphael.min.js"></script>
+<script src="../bower_components/morris.js/morris.min.js"></script>
+<!-- Sparkline -->
+<script src="../bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+<!-- jvectormap -->
+<script src="../plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="../plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="../bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="../bower_components/moment/min/moment.min.js"></script>
+<script src="../bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- datepicker -->
+<script src="../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<!-- Slimscroll -->
+<script src="../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="../dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
 </body>
 </html>
 <?php
 } else {
-	echo "<script>window.location='../login.php';</script>";
+  echo "<script>window.location='../index.php';</script>";
 }
