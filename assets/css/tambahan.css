@@ -24,7 +24,6 @@
 	background:#09C6AB;
 	width: 100%;
 	height: 100px;
-	margin-top: 70px;
 	margin-bottom: 50px;
 	position: relative;
 	padding-top: 40px;
@@ -34,4 +33,32 @@
 	color: #fff;
 }
 
+.sap_tabs{
+	padding-top: 100px;
+}
 
+.header{
+	background:url(assets/images/images.jpg);
+	width: 100%;
+}
+
+.tamprute{
+	text-align: center;
+	color: white;
+	font-size: 40px;
+}
+
+.konfirm{
+	background-color: black;
+	width: 100%;
+	height: 400px;
+	padding-top: 35px;
+}
+
+.kbreadcum{
+	background-color: white;
+	width: 100%;
+	height: 300px;
+	border-radius: 10px;
+	padding: 20px;
+}

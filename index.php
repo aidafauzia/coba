@@ -19,7 +19,6 @@ require_once 'action/koneksi.php'
 					</div>
 					<div class="col-xs-8 text-right menu-1">
 						<ul>
-							<li><a href="booking.php">Booking</a></li>
 							<li class="has-dropdown">
 								<a href="#">Travel</a>
 								<ul class="dropdown">
@@ -46,10 +45,10 @@ require_once 'action/koneksi.php'
 						
 
 						<div class="row row-mt-15em">
-							<div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+							<div class="col-md-5 mt-text animate-box" data-animate-effect="fadeInUp">
 								<h1>Planing Trip To Anywhere in The World?</h1>	
 							</div>
-							<div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+							<div class="col-md-6 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
 								<div class="form-wrap">
 									<div class="tab">
 										
@@ -59,22 +58,55 @@ require_once 'action/koneksi.php'
 												<form action="cari.php" method="GET">
 													<div class="row form-group">
 														<div class="col-md-12">
-															<label for="fullname">Kota Asal</label>
-															<input type="text" id="asal" class="form-control" name="asal">
+															<h4>Keberangkatan</h4>
+															<select class="form-control" name="asal" required>
+																<option>Pilih Bandara</option>
+																<?php 
+																$sql = mysqli_query($connect, "SELECT DISTINCT asal from rute");
+																if(mysqli_num_rows($sql)){
+																	while($data = 
+																		mysqli_fetch_assoc($sql)){
+																		echo "<option value='".$data['asal']."'>".$data['asal'].'</option>';
+																	}
+																}
+																?>
+															</select>
 														</div>
 													</div>
 													<div class="row form-group">
 														<div class="col-md-12">
-															<label for="fullname">Kota Tujuan</label>
-															<input type="text" id="tujuan" class="form-control" nama="tujuan">
+															<h4>Keberangkatan</h4>
+															<select class="form-control" name="tujuan" required>
+																<option>Pilih Bandara</option>
+																<?php 
+																$sql = mysqli_query($connect, "SELECT DISTINCT tujuan from rute");
+																if(mysqli_num_rows($sql)){
+																	while($data = 
+																		mysqli_fetch_assoc($sql)){
+																		echo "<option value='".$data['tujuan']."'>".$data['tujuan'].'</option>';
+																	}
+																}
+																?>
+															</select>
 														</div>
 													</div>
 													<div class="row form-group">
-														<div class="col-md-12">
-															<label for="date-start">Tanggal Berangkat</label>
-															<input type="text" id="tanggal" class="form-control" name="tanggal">
+														<div class="col-md-6">
+															<label for="date-start" require>Tanggal Berangkat</label>
+															<input type="date" id="tanggal" class="form-control" name="tanggal">
+														</div>
+														<div class="col-md-6">
+															<label class="lab">Jumlah</label><br>
+															<select class="form-control" name="jumlah">
+																<option>1</option>
+																<option>2</option>
+																<option>3</option>
+																<option>4</option>
+																<option>5</option>
+															</select>
 														</div>
 													</div>
+
 
 													<div class="row form-group">
 														<div class="col-md-12">
@@ -84,19 +116,19 @@ require_once 'action/koneksi.php'
 												</form>	
 											</div>
 
-											
+
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						
-						
+
+
 					</div>
 				</div>
 			</div>
 		</header>
-		
+
 		<div class="gtco-section">
 			<div class="gtco-container">
 				<div class="row">
@@ -193,7 +225,7 @@ require_once 'action/koneksi.php'
 				</div>
 			</div>
 		</div>
-		
+
 		<div id="gtco-features">
 			<div class="gtco-container">
 				<div class="row">
@@ -230,7 +262,7 @@ require_once 'action/koneksi.php'
 							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
 						</div>
 					</div>
-					
+
 
 				</div>
 			</div>
@@ -259,7 +291,7 @@ require_once 'action/koneksi.php'
 				</div>
 
 				<div class="row">
-					
+
 					<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInUp">
 						<div class="feature-center">
 							<span class="counter js-counter" data-from="0" data-to="196" data-speed="5000" data-refresh-interval="50">1</span>
@@ -286,12 +318,12 @@ require_once 'action/koneksi.php'
 
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
 
-		
+
 
 		<div id="gtco-subscribe">
 			<div class="gtco-container">

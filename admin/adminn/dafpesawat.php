@@ -388,7 +388,7 @@ if($_SESSION['traveler']){
   // Load file koneksi.php
                require_once '../action/koneksi.php';
 
-                              $query = "SELECT * FROM transportation"; // Query untuk menampilkan semua data siswa
+                              $query = "SELECT * FROM transport"; // Query untuk menampilkan semua data siswa
                               $sql = mysqli_query($connect, $query); // Eksekusi/Jalankan query dari variabel $query
                               $no=1;
                               while($data = mysqli_fetch_array($sql)){ // Ambil semua data dari hasil eksekusi $sql
@@ -399,8 +399,8 @@ if($_SESSION['traveler']){
                                 echo "<td>".$data['deskripsi']."</td>";
                                 echo "<td>".$data['seat']."</td>";
                                 echo "<td>
-                                <a class='fa fa-edit' href='editpesawat.php?id=".$data['id']."'></a>
-                                <a class='fa fa-trash-o' href='deletpesawat.php?aksi=delete&id=".$data['id']."'></a>
+                                <a class='fa fa-edit' href='editpesawat.php?id_transport=".$data['id_transport']."'></a>
+                                <a class='fa fa-trash-o' href='deletpesawat.php?aksi=delete&id_transport=".$data['id_transport']."'></a>
                               </td>";
 
                               echo "</tr>";

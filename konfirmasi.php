@@ -3,6 +3,11 @@ require_once 'action/koneksi.php'
 ?>
 
 <?php require_once 'page/header.php' ?>
+<style type="text/css">
+	p{
+		padding-left: 5px;
+	}
+</style>
 
 <div class="gtco-loader"></div>
 
@@ -40,77 +45,44 @@ require_once 'action/koneksi.php'
 		<div id="gtco-features" >
 			<div class="gtco-container">
 				<div class="tamprute">
-					<?php 
-					echo $_GET['asal'];
-					echo " <i class='icon-arrow-right'></i> ";
-					echo $_GET['tujuan'];
-					?>
+					
 				</div>
 			</div>
 		</div>
 
 		
 		<div class="overlay"></div>
-		<div class="gtco-container">
-			<div class="container">
-				<div class="col-md-12 banner-right">
-					<div class="sap_tabs">	
-						<div class="booking-info">
-							<h2>Hasil Pencarian</h2>
-						</div>
-						<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-							<table class="table" style="color: black;">
-								<thead>
-									<tr>
-										<th>No</th>
-										<th>Maskapai</th>
-										<th>Tanggal</th>
-										<th>Berangkat</th>
-										<th>Tiba</th>
-										<th>Harga</th>
-										<th>Opsi</th>
-									</tr>
-								</thead>
-								<tbody>
-									<?php
-									require "action/koneksi.php";
-									if(isset($_GET['asal'])){
-										$asal = $_GET['asal'];
-										$tujuan = $_GET['tujuan'];
-										$tanggal = $_GET['tanggal'];
-										$jumlah = $_GET['jumlah'];
-										$data = mysqli_query($connect, "SELECT * FROM rute, transport where rute.asal like '".$asal."' AND rute.tujuan like '".$tujuan."' AND rute.tanggal like '".$tanggal."' AND rute.maskapai = transport.id_transport order by rute.harga");  
-										$id = 1;
-										while($d = mysqli_fetch_array($data)){
-											echo'
-											<tr height="80px">
-											<td>'.$id.'</td>
-											<td><img src="assets/images/'.$d['logo'].'" width="70px" > '.$d['nama'].'
-											<br>'?>
-											<?php
-											$tiba = strtotime($d['tiba']);
-											$berangkat = strtotime($d['berangkat']);
-											$durasi = $tiba-$berangkat;
-											echo ''.gmdate("H",$durasi).' jam '.gmdate("i", $durasi). ' menit ';
-											?>
-											<?php echo'
-											</td>
-											<td> '.$d['tanggal'].'</td>
-											<td> '.$d['berangkat'].'</td>
-											<td> '.$d['tiba'].'</td>
-											<td>Rp '.$d['harga'].'</td>
-											<td><a href="konfirmasi.php?id_rute='.$d['id_rute'].'&jumlah='.$jumlah.'" style="color:black;">Pesan</a></td>
-											</tr>';
-											$id++;
-										} 
-									}
-									?>
-								</tbody>
-							</table>
-						</div>
+		<div class="konfirm">
+			<div class="gtco-container">
+				<div class="col-md-8">
+					<div class="kbreadcum">
+						<h3>Detail Pemesanan</h3>
+						<?php
+						$id_rute = $_GET['id_rute'];
+						$jumlah = $_GET['jumlah'];
+						$data = mysqli_query($connect, "SELECT rute.asal, rute.tujuan, rute.tanggal, rute.sisa_seat, rute.berangkat, rute.tiba, rute.harga, rute.id_rute, transport.nama, transport.logo, transport.kode from rute, transport where rute.maskapai=transport.id_transport and rute.id_rute=".$id_rute."");
+						$d = mysqli_fetch_array($data);
+						echo "<i class='icon-paper-plane'> </i>";
+						echo $d['asal'];
+						echo " <i class='icon-arrow-right'> </i> ";
+						echo $d['tujuan'];
+						?>
+						<div style="width: 100%; height: 1px; background-color: red; margin: 10px 0px;"></div>
+						<p><?php echo date('D, d/M/Y', strtotime($d['tanggal']));?></p>						
+						<p><?php echo '<img src="assets/images/'.$d['logo'].'" width="70px" > '.$d['nama'].' '.$d['kode'].''; ?></p>
+						<p><?php echo $d['berangkat'].' <span class="icon-arrow-right" style="margin-left:100px; margin-right:50px;"></span> '.$d['tiba']?><br>
+						<?php echo $d['asal'].' <span class="icon-arrow-right" style="margin:50px"></span> '.$d['tujuan']?></p>
 					</div>
 				</div>
-				<div class="clearfix"> </div>
+
+				<div class="col-md-4">
+					<div class="kbreadcum">
+						<h3>Rincian Harga</h3>
+						
+					</div>
+				</div>
+
+				<div class="clearfix"></div>
 			</div>
 		</div>
 		

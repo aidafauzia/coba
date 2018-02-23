@@ -6,8 +6,8 @@
 
       <?php
       require_once '../action/koneksi.php';
-      $ambilid = $_GET['id'];
-      $res = $connect ->query("SELECT * from transportation where id='$ambilid'");
+      $ambilid = $_GET['id_transport'];
+      $res = $connect ->query("SELECT * from transport where id_transport='$ambilid'");
       $data = $res->fetch_array(MYSQLI_ASSOC);
 
       if(isset($_POST['edit'])){
@@ -15,7 +15,7 @@
         $kode = $_POST['kode'];
         $deskripsi = $_POST['deskripsi'];
         $seat = $_POST['seat'];
-        $update = $connect->query("UPDATE transportation SET nama='$nama', kode='$kode', deskripsi='$deskripsi', seat='$seat' WHERE id='$ambilid'");
+        $update = $connect->query("UPDATE transport SET nama='$nama', kode='$kode', deskripsi='$deskripsi', seat='$seat' WHERE id_trans='$ambilid'");
         header("location:dafpesawat.php");
 
       }
@@ -407,8 +407,10 @@
                     <input type="text" class="form-control" id="seat" placeholder="Jumlah Seat" name="seat" value="<?php echo $data['seat'];?>"> 
                   </div>
                   <div class="submit">
-                    <input type="submit" value="edit" name="edit">
+                    <input type="submit" value="edit" name="edit" class="btn btn-default">
+                    <a href="dafpesawat.php" class="btn btn-default">Back</a>
                   </div> 
+
 
 
                 </form>

@@ -11,7 +11,7 @@
       $kode = $_POST['kode'];
       $deskripsi = $_POST['deskripsi'];
       $seat = $_POST['seat'];     
-      $connect->query("INSERT INTO transportation (nama, kode, deskripsi, seat) VALUES ('$nama','$kode','$deskripsi','$seat')");
+      $connect->query("INSERT INTO transport (nama, kode, deskripsi, seat) VALUES ('$nama','$kode','$deskripsi','$seat')");
     }
     ?>
 
@@ -401,7 +401,7 @@
                     <input type="text" class="form-control" id="seat" placeholder="Jumlah Seat" name="seat"> 
                   </div>
                   <div class="submit">
-                    <input type="submit" value="Input" name="Input">                    
+                    <input type="submit" class="btn btn-default" value="Input" name="Input">                    
                     <a href="dafpesawat.php" class="btn btn-default">Back</a>
                   </div> 
 

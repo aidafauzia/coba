@@ -758,7 +758,9 @@ form label {
 }
 
 #gtco-features {
-  background: #09C6AB;
+  background: url(../images/gambar.jpg);
+  background-size: cover;
+  background-position: 0px;
 }
 #gtco-features .gtco-heading h2 {
   color: #fff;
